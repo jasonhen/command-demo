@@ -49,13 +49,13 @@ function addMsg3ToBody(event) {
 }
 
 // Gets the subject of the item and displays it in the info bar.
-function getSubject(event) {
+function createMeeting(event) {
   var subject = Office.context.mailbox.item.subject;
   
-  Office.context.mailbox.item.notificationMessages.addAsync("subject", {
+  Office.context.mailbox.item.notificationMessages.addAsync("meeting", {
     type: "informationalMessage",
     icon: "blue-icon-16",
-    message: "Subject: " + subject,
+    message: "Creating a meeting",
     persistent: false
   });
   

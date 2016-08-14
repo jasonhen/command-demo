@@ -8,11 +8,15 @@
   // The Office initialize function must be run each time a new page is loaded
   Office.initialize = function (reason) {
       $(document).ready(function () {
-          app.initialize();
-
-          loadProps();
+          app.initialize
       });
   };
+
+  function showLabel()
+  {
+    //  $('#finishLabel').show();
+      window.open('http://google.com');
+  }
   
   // Take an array of AttachmentDetails objects and
   // build a list of attachment names, separated by a line-break
