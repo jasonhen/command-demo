@@ -10,7 +10,7 @@
   <Version>1.0.0.1</Version>
   <ProviderName>Microsoft Outlook Dev Center</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Add-in Command Demo" />
+  <DisplayName DefaultValue="Outlook Mobile Add-in Utilities" />
   <Description DefaultValue="Adds command buttons to the ribbon in Outlook"/>
   <IconUrl DefaultValue="https://outlookmobile.azurewebsites.net/images/blue-64.png" />
   <HighResolutionIconUrl DefaultValue="https://outlookmobile.azurewebsites.net/images/blue-80.png" />
@@ -295,7 +295,7 @@
                   </Action>
                 </Control>
 
-                <!-- Task pane button -->
+                <!-- Cheer - Task pane button -->
                 <Control xsi:type="Button" id="msgReadOpenPaneButton">
                   <Label resid="paneReadButtonLabel" />
                   <Supertip>
@@ -309,6 +309,23 @@
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="readTaskPaneUrl" />
+                  </Action>
+                </Control>
+                
+                <!-- Slack - Task pane button -->
+                <Control xsi:type="Button" id="slackReadOpenPaneButton">
+                  <Label resid="slackpaneReadButtonLabel" />
+                  <Supertip>
+                    <Title resid="paneReadSuperTipTitle" />
+                    <Description resid="paneReadSuperTipDescription" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="red-icon-16" />
+                    <bt:Image size="32" resid="red-icon-32" />
+                    <bt:Image size="80" resid="red-icon-80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="slackTaskPaneUrl" />
                   </Action>
                 </Control>
               </Group>
@@ -423,13 +440,13 @@
     <Resources>
       <bt:Images>
         <!-- Blue icon -->
-        <bt:Image id="blue-icon-16" DefaultValue="https://outlookmobile.azurewebsites.net/images/blue-16.png"/>
-        <bt:Image id="blue-icon-32" DefaultValue="https://outlookmobile.azurewebsites.net/images/blue-32.png"/>
+        <bt:Image id="blue-icon-16" DefaultValue="https://outlookmobile.azurewebsites.net/images/meeting-16.png"/>
+        <bt:Image id="blue-icon-32" DefaultValue="https://outlookmobile.azurewebsites.net/images/meeting-32.png"/>
         <bt:Image id="blue-icon-80" DefaultValue="https://outlookmobile.azurewebsites.net/images/meeting-80.png"/>
         <!-- Red icon -->
-        <bt:Image id="red-icon-16" DefaultValue="https://outlookmobile.azurewebsites.net/images/red-16.png"/>
-        <bt:Image id="red-icon-32" DefaultValue="https://outlookmobile.azurewebsites.net/images/red-32.png"/>
-        <bt:Image id="red-icon-80" DefaultValue="https://outlookmobile.azurewebsites.net/images/red-80.png"/>
+        <bt:Image id="red-icon-16" DefaultValue="https://outlookmobile.azurewebsites.net/images/slack-16.png"/>
+        <bt:Image id="red-icon-32" DefaultValue="https://outlookmobile.azurewebsites.net/images/slack-32.png"/>
+        <bt:Image id="red-icon-80" DefaultValue="https://outlookmobile.azurewebsites.net/images/slack-80.png"/>
         <!-- Green icon -->
         <bt:Image id="green-icon-16" DefaultValue="https://outlookmobile.azurewebsites.net/images/green-16.png"/>
         <bt:Image id="green-icon-32" DefaultValue="https://outlookmobile.azurewebsites.net/images/cheer-64.png"/>
@@ -438,6 +455,8 @@
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://outlookmobile.azurewebsites.net/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/TaskPane.html"/>
+
+        <bt:Url id="slackTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="composeTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppCompose/TaskPane/TaskPane.html"/>
         <bt:Url id="customPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/CustomPane/CustomPane.html"/>
       </bt:Urls>
@@ -459,6 +478,8 @@
         <!-- Read mode -->
         <bt:String id="funcReadButtonLabel" DefaultValue="Instant Meeting"/>
         <bt:String id="menuReadButtonLabel" DefaultValue="Get property"/>
+
+        <bt:String id="slackpaneReadButtonLabel" DefaultValue="Post to Slack"/>
         <bt:String id="paneReadButtonLabel" DefaultValue="Send a Cheer"/>
 
         <bt:String id="funcReadSuperTipTitle" DefaultValue="Gets the subject of the message or appointment"/>
