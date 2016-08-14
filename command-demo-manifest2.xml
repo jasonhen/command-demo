@@ -168,11 +168,10 @@
         
       </bt:ShortStrings>
       <bt:LongStrings>
-      !-- Read mode -->
+      <!-- Read mode -->
         <bt:String id="funcReadSuperTipDescription" DefaultValue="Quickly Create a Meeting."/>
         <bt:String id="paneReadSuperTipDescription" DefaultValue="Quickly send a cheer."/>
-        
-           </bt:LongStrings>
+        </bt:LongStrings>
     </Resources>
   </VersionOverrides>
 </OfficeApp>
