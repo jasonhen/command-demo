@@ -6,11 +6,11 @@
   "use strict";
 
   // The Office initialize function must be run each time a new page is loaded
-  Office.initialize = function (reason) {
+ /* Office.initialize = function (reason) {
       $(document).ready(function () {
           app.initialize
       });
-  };
+  };*/
 
   function showLabel()
   {
