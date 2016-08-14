@@ -10,7 +10,7 @@
   <Version>1.0.0.1</Version>
   <ProviderName>Microsoft Outlook Dev Center</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Outlook Mobile Add-in Utilities" />
+  <DisplayName DefaultValue="Quick Actions" />
   <Description DefaultValue="Adds command buttons to the ribbon in Outlook"/>
   <IconUrl DefaultValue="https://outlookmobile.azurewebsites.net/images/blue-64.png" />
   <HighResolutionIconUrl DefaultValue="https://outlookmobile.azurewebsites.net/images/blue-80.png" />
