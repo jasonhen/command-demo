@@ -56,7 +56,6 @@
       <Host xsi:type="MailHost">
 
         <DesktopFormFactor>
-          <FunctionFile resid="functionFile" />
           
           <!-- Custom pane, only applies to read form -->
           <ExtensionPoint xsi:type="CustomPane">
