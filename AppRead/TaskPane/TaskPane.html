@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <title></title>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
 
     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
@@ -59,21 +61,24 @@
                                 </div>
                             </button>
                         </li>
+                        <li class="ms-OrgChart-listItem">
+                            <button onclick="setLabel();" class="ms-OrgChart-listItemBtn">
+                                <div class="ms-Persona">
+                                    <div class="ms-Persona-imageArea">
+                                        <i class="ms-Persona-placeholder ms-Icon ms-Icon--person"></i>
+                                        <img class="ms-Persona-image" src="./images/almostthere.png">
+                                    </div>
+                                    <div class="ms-Persona-details">
+                                        <div class="ms-Persona-primaryText">Almost There!</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
     <label id="statusLabel" class="ms-Label"></label>
-    <script lang="application/javascript">
-
-// wire up dropdown controls
-
-
-function setLabel()
-{
-    $('#statusLabel').html("Cheer sent!");
-}
-
-    </script>
+    
 </body>
 </html>
 

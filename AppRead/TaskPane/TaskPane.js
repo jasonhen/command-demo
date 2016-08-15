@@ -2,6 +2,8 @@
 
 /// <reference path="../App.js" />
 
+
+
 (function () {
   "use strict";
 
@@ -12,11 +14,11 @@
       });
   };
 
-  function showLabel()
-  {
-    //  $('#finishLabel').show();
-      window.open('http://google.com');
+  function setLabel() {
+      $('#statusLabel').html("Cheer sent!");
+      loadMessageProps(Office.context.mailbox.item);
   }
+
   
   // Take an array of AttachmentDetails objects and
   // build a list of attachment names, separated by a line-break
@@ -64,65 +66,9 @@
   
   // Load properties from a Message object
   function loadMessageProps(item) {
-    $('#message-props').show();
-    
-    $('#attachments').html(buildAttachmentsString(item.attachments));
-    $('#cc').html(buildEmailAddressesString(item.cc));
-    $('#conversationId').text(item.conversationId);
-    $('#from').html(buildEmailAddressString(item.from));
-    $('#internetMessageId').text(item.internetMessageId);
-    $('#normalizedSubject').text(item.normalizedSubject);
-    $('#sender').html(buildEmailAddressString(item.sender));
-    $('#subject').text(item.subject);
-    $('#to').html(buildEmailAddressesString(item.to));
+      $('#statusLabel').html(buildEmailAddressString(item.from));
   }
   
-  // Load properties from an Appointment object
-  function loadAppointmentProps(item) {
-    $('#appointment-props').show();
-    
-    $('#appt-attachments').html(buildAttachmentsString(item.attachments));
-    $('#end').text(item.end.toLocaleString());
-    $('#location').text(item.location);
-    $('#appt-normalizedSubject').text(item.normalizedSubject);
-    $('#optionalAttendees').html(buildEmailAddressesString(item.optionalAttendees));
-    $('#organizer').html(buildEmailAddressString(item.organizer));
-    $('#requiredAttendees').html(buildEmailAddressesString(item.requiredAttendees));
-    $('#resources').html(buildEmailAddressesString(item.resources));
-    $('#start').text(item.start.toLocaleString());
-    $('#appt-subject').text(item.subject);
-  }
-  
-  // Load properties from the Item base object, then load the
-  // type-specific properties.
-  function loadProps() {
-    var item = Office.context.mailbox.item;
-    
-    $('#dateTimeCreated').text(item.dateTimeCreated.toLocaleString());
-    $('#dateTimeModified').text(item.dateTimeModified.toLocaleString());
-    $('#itemClass').text(item.itemClass);
-    $('#itemId').text(item.itemId);
-    $('#itemType').text(item.itemType);
-    
-    item.body.getAsync('html', function(result){
-      if (result.status === 'succeeded') {
-        $('#bodyHtml').text(result.value);
-      }
-    });
-    
-    item.body.getAsync('text', function(result){
-      if (result.status === 'succeeded') {
-        $('#bodyText').text(result.value);
-      }
-    });
-    
-    if (item.itemType == Office.MailboxEnums.ItemType.Message){
-      loadMessageProps(item);
-    }
-    else {
-      loadAppointmentProps(item);
-    }
-  }
 })();
 
 // MIT License: 
