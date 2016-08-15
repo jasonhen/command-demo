@@ -5,32 +5,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <title></title>
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-  
-  
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+  <title></title> 
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
   
     <script src="dropdown.js" type="application/javascript"></script>
 
 </head>
 <body>
-
+    <img src="../../Images/slacklogo.png" height="60" /> 
+    <br />
     <div class="ms-Dropdown">
         <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown"></i>
         <select class="ms-Dropdown-select" data-ng-model="vm.pick.position">
-            <option value="">Slack Channel...</option>
+            <option value="">Select Slack Channel...</option>
             <option value="QB">General</option>
             <option value="RB">Extensibility Feature Crew</option>
             <option value="WR">Connectors Feature Crew</option>
             <option value="TE">REST API Team</option>
         </select>
     </div>
-    <button class="ms-Button">Post</button>
+    <button onclick="setLabel();" class="ms-Button">Post</button>
     <br />
     <br />
-    <img src="../../Images/Slack.png" height="80"/> 
+    <label class="ms-Label" id="doneLabel"></label>
+    
 
     <script lang="application/javascript">
 
@@ -45,6 +46,10 @@ $('.ms-Dropdown').Dropdown();
 }
 
 });
+function setLabel()
+{
+    $('label').html("Message posted to Slack");
+}
 
     </script>
     </body>
