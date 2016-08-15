@@ -4,7 +4,7 @@
 
 function setLabel() {
     $('#statusLabel').html("Cheer sent!");
-   // loadMessageProps(Office.context.mailbox.item);
+    loadMessageProps(Office.context.mailbox.item);
 }
 
 (function () {

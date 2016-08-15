@@ -151,7 +151,7 @@
         <bt:Url id="functionFile" DefaultValue="https://outlookmobile.azurewebsites.net/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="slackTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/slackTaskPane.html"/>
-        <bt:Url id="customPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/CustomPane/CustomPane.html"/>
+        <bt:Url id="customPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/TaskPane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Quick Actions"/>
