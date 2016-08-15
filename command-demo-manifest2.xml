@@ -74,20 +74,22 @@
             <OfficeTab id="TabDefault">
               <Group id="msgReadDemoGroup">
                 <Label resid="groupLabel" />
-                <!-- Function (UI-less) button -->
-                <Control xsi:type="Button" id="msgReadFunctionButton">
-                  <Label resid="funcReadButtonLabel" />
+               
+
+                <!-- Meeting - Task pane button -->
+                <Control xsi:type="Button" id="meetingReadOpenPaneButton">
+                  <Label resid="meetingpaneReadButtonLabel" />
                   <Supertip>
-                    <Title resid="funcReadSuperTipTitle" />
-                    <Description resid="funcReadSuperTipDescription" />
+                    <Title resid="paneReadSuperTipTitle" />
+                    <Description resid="paneReadSuperTipDescription" />
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="blue-icon-16" />
                     <bt:Image size="32" resid="blue-icon-32" />
                     <bt:Image size="80" resid="blue-icon-80" />
                   </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>createMeeting</FunctionName>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="meetingTaskPaneUrl" />
                   </Action>
                 </Control>
 
@@ -148,9 +150,9 @@
         <bt:Image id="green-icon-80" DefaultValue="https://outlookmobile.azurewebsites.net/images/cheer-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://outlookmobile.azurewebsites.net/FunctionFile/Functions.html"/>
         <bt:Url id="readTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/TaskPane.html"/>
         <bt:Url id="slackTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/slackTaskPane.html"/>
+        <bt:Url id="meetingTaskPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/meetingTaskPane.html"/>
         <bt:Url id="customPaneUrl" DefaultValue="https://outlookmobile.azurewebsites.net/AppRead/TaskPane/TaskPane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
@@ -158,18 +160,18 @@
         <!-- Compose mode -->
      
         <!-- Read mode -->
-        <bt:String id="funcReadButtonLabel" DefaultValue="Instant Meeting"/>
+        <bt:String id="meetingpaneReadButtonLabel" DefaultValue="Instant Meeting"/>
         <bt:String id="slackpaneReadButtonLabel" DefaultValue="Post to Slack"/>
         <bt:String id="paneReadButtonLabel" DefaultValue="Send a Cheer"/>
 
-        <bt:String id="funcReadSuperTipTitle" DefaultValue="Instantly Schedule a Meeting"/>
+        <bt:String id="meetingpaneReadSuperTipTitle" DefaultValue="Instantly Schedule a Meeting"/>
         <bt:String id="slackpaneReadSuperTipTitle" DefaultValue="Post to Slack"/>
         <bt:String id="paneReadSuperTipTitle" DefaultValue="Send a Cheer"/>
         
       </bt:ShortStrings>
       <bt:LongStrings>
       <!-- Read mode -->
-        <bt:String id="funcReadSuperTipDescription" DefaultValue="Quickly Create a Meeting."/>
+        <bt:String id="meetingpaneSuperTipDescription" DefaultValue="Quickly Create a Meeting."/>
         <bt:String id="paneReadSuperTipDescription" DefaultValue="Quickly send a cheer."/>
         </bt:LongStrings>
     </Resources>
