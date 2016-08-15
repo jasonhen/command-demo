@@ -8,14 +8,15 @@
   <title></title> 
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
-  
+       
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.6.1/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.6.1/fabric.components.min.css">
     <script src="dropdown.js" type="application/javascript"></script>
 
 </head>
 <body>
     <img src="../../Images/slacklogo.png" height="60" /> 
+    <br />
     <br />
     <div class="ms-Dropdown">
         <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown"></i>
@@ -27,11 +28,22 @@
             <option value="TE">REST API Team</option>
         </select>
     </div>
+    <br />
     <button onclick="setLabel();" class="ms-Button">Post</button>
     <br />
     <br />
     <label class="ms-Label" id="doneLabel"></label>
-    
+
+    <div id="infobar" class="ms-MessageBar ms-MessageBar--success">
+        <div class="ms-MessageBar-content">
+            <div class="ms-MessageBar-icon">
+                <i class="ms-Icon ms-Icon--checkboxCheck ms-Icon--circle"></i>
+            </div>
+            <div class="ms-MessageBar-text">
+                Your message was posted to Slack<br>
+            </div>
+        </div>
+    </div>
 
     <script lang="application/javascript">
 
@@ -41,14 +53,15 @@ $(document).ready(function(){
 
 if ($.fn.Dropdown){
 
-$('.ms-Dropdown').Dropdown();
+    $('.ms-Dropdown').Dropdown();
+    $('#infobar').hide();
 
 }
 
 });
 function setLabel()
 {
-    $('label').html("Message posted to Slack");
+    $('#infobar').show();
 }
 
     </script>
