@@ -16,8 +16,8 @@
   };
 
   function setLabel() {
-      $('#statusLabel').html("Cheer sent!");
-   //   loadMessageProps(Office.context.mailbox.item);
+    //  $('#statusLabel').html("Cheer sent!");
+     loadMessageProps(Office.context.mailbox.item);
   }
 
   
