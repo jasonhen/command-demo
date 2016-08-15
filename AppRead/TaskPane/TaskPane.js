@@ -43,7 +43,7 @@
   // Format an EmailAddressDetails object as
   // GivenName Surname <emailaddress>
   function buildEmailAddressString(address) {
-    return address.displayName + " &lt;" + address.emailAddress + "&gt;";
+    return address.displayName;
   }
   
   // Take an array of EmailAddressDetails objects and
@@ -67,7 +67,7 @@
   
   // Load properties from a Message object
   function loadMessageProps(item) {
-      $('#statusLabel').html(buildEmailAddressString(item.from));
+      $('#statusLabel').html("Message sent to: "+buildEmailAddressString(item.from));
   }
   
 })();
