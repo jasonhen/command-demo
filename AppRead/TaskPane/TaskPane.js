@@ -2,10 +2,7 @@
 
 /// <reference path="../App.js" />
 
-function setLabel() {
-    $('#statusLabel').html("Cheer sent!");
-    loadMessageProps(Office.context.mailbox.item);
-}
+
 
 (function () {
   "use strict";
@@ -17,7 +14,10 @@ function setLabel() {
       });
   };
 
-  
+  function setLabel() {
+      $('#statusLabel').html("Cheer sent!");
+      loadMessageProps(Office.context.mailbox.item);
+  }
 
   
   // Take an array of AttachmentDetails objects and
