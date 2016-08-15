@@ -67,7 +67,7 @@
   
   // Load properties from a Message object
   function loadMessageProps(item) {
-      $('#statusLabel').html("Message sent to: "+buildEmailAddressString(item.from));
+      $('#statusLabel').html("Message sent to: "+buildEmailAddressString(item.to));
   }
   
 })();
