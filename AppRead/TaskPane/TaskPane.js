@@ -10,13 +10,14 @@
   // The Office initialize function must be run each time a new page is loaded
   Office.initialize = function (reason) {
       $(document).ready(function () {
-          app.initialize
+          app.initialize();
+          $('button').click(setLabel);
       });
   };
 
   function setLabel() {
       $('#statusLabel').html("Cheer sent!");
-      loadMessageProps(Office.context.mailbox.item);
+   //   loadMessageProps(Office.context.mailbox.item);
   }
 
   
