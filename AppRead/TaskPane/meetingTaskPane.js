@@ -11,7 +11,7 @@
     Office.initialize = function (reason) {
         $(document).ready(function () {
             app.initialize();
-            $('button').click(setLabel);
+            getCallbackToken();
         });
     };
 
@@ -26,7 +26,7 @@
 
     function cb(asyncResult) {
         var token = asyncResult.value;
-        $('#statusLabel').html("<span class='ms-font-l'>"+ token + "</span>");
+        $('#testLabel').html("<span class='ms-font-l'>"+ token + "</span>");
     }
 
     // Take an array of AttachmentDetails objects and
